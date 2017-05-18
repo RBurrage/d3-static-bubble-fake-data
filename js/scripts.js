@@ -50,7 +50,7 @@ d3.csv("data.csv", function(d) {
             })     
             .style("fill", function(d) { 
                 if(d.value < 0){
-                    return "#1f4982";
+                    return "#AB1211";
                 }else {
                 return color(d.package); 
                 }
