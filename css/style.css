@@ -1,0 +1,59 @@
+html, body {
+    margin:5px 0;
+    font-family: 'Lato', sans-serif;
+    background: #444;
+}
+text {
+  font: 14px 'Lato', sans-serif;
+  fill: #fff;
+}
+
+h1 {
+    font-size: 20px;
+}
+h2 {
+    color: #fff;
+    font-weight: normal;
+    margin:20px;
+}
+h3 {
+    font-style:normal
+}
+svg {
+    float:left;
+    background-position: center;     
+    border-right: 1px solid #ccc;
+}
+#additional-info {
+    width: 300px;
+    padding: 0 20px;
+    color: #fff;
+    float:left;
+    min-height: 700px;
+}
+.showMeTheMoney {
+    font-size: 30px
+}
+.bold {
+    font-weight: bold;
+}
+text.rev-label{
+ fill: #fff;
+ font-size:14px;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+  pointer-events: none;
+  width:150px;
+  opacity: 0.85;
+}
+.rev {
+    color: #497BA0;
+}
