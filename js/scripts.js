@@ -2,15 +2,15 @@ var margin = {top: 50, right: 80, bottom: 5, left: 150},
     svg = d3.select("svg"),
     height = 800,
     width = 800,
-    color = d3.scaleOrdinal(["#0D2D44", "#1B5B88", "#497BA0"]),
-    pack = d3.pack().size([width, width]).padding(90)
-    tooltip = d3.select("body").append("div").attr("class", "toolTip"),
-    additionalInfo = document.getElementById('additional-info'),
-    legendSquare = 20,
-    legendSpacing = 5,
+    color = d3.scaleOrdinal(["#011024", "#1f4982", "#5b81b6"]),
     legendColor = d3.scaleOrdinal()
         .domain(["Advisory", "Advisory Recurring Revenue", "Non-Advisory Recurring Revenue", "Negative Revenue"])
-        .range(["#1B5B88", "#0D2D44", "#497BA0", "#AB1211"]);
+        .range(["#011024", "#1f4982", "#5b81b6", "#AB1211"]),
+    legendSquare = 20,
+    legendSpacing = 5,
+    pack = d3.pack().size([width, width]).padding(90),
+    tooltip = d3.select("body").append("div").attr("class", "toolTip"),
+    additionalInfo = document.getElementById('additional-info');
 
 svg.attr("height", height).attr("width", width);
 
@@ -20,7 +20,6 @@ d3.csv("data.csv", function(d) {
             return d;
         }
     }, function(error, classes) {
-        if (error) throw error;
         var root = d3.hierarchy({children: classes})
             .sum(function(d) { return d.value; })
             .each(function(d) {
@@ -51,13 +50,13 @@ d3.csv("data.csv", function(d) {
             })     
             .style("fill", function(d) { 
                 if(d.value < 0){
-                    return "#AB1211";
+                    return "#1f4982";
                 }else {
                 return color(d.package); 
                 }
             })
             .style("stroke-width","1px")
-            .style("stroke","#666")
+            .style("stroke","#000")
 
             .on("mousemove", function(d){
                 tooltip
@@ -72,7 +71,7 @@ d3.csv("data.csv", function(d) {
                 })
             .on('click', function(d) {     
                 additionalInfo.innerHTML = 
-                    "<h3>Additional Charts pertaining to " + d.business_line + " will go here.</h3>"
+                    d.business_line + "<br>" + d.recurring_type + "<br>" + d.value;
                 });
 
         node.append("text")
@@ -83,7 +82,7 @@ d3.csv("data.csv", function(d) {
             .append("tspan")
             .style("text-anchor","middle")
             .attr("x", 0)
-            .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 15; })
+            .attr("y", function(d, i, nodes) { return 18 + (i - nodes.length / 2 - 0.5) * 15; })
             .text(function(d) { return d; })
             .attr("class","circle-label");
 
