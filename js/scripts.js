@@ -10,7 +10,8 @@ var margin = {top: 50, right: 80, bottom: 5, left: 150},
     legendSpacing = 5,
     pack = d3.pack().size([width, width]).padding(90),
     tooltip = d3.select("body").append("div").attr("class", "toolTip"),
-    additionalInfo = document.getElementById('additional-info');
+    additionalInfo = document.getElementById('additional-info'),
+    formatComma = d3.format(",");
 
 svg.attr("height", height).attr("width", width);
 
@@ -22,7 +23,7 @@ d3.csv("data.csv", function(d) {
     }, function(error, classes) {
         var root = d3.hierarchy({children: classes})
             .sum(function(d) { return d.value; })
-            .each(function(d) {console.log(d);
+            .each(function(d) {
                 if (id = d.data.business_line) {
                   d.recurring_type = d.data.recurring_type;
                   var i = id.lastIndexOf(".");
@@ -44,6 +45,7 @@ d3.csv("data.csv", function(d) {
             .attr("id", function(d) { 
                 return d.business_line; 
             })
+            .attr("class", "bubble")
             .attr("r", function(d) { 
                 if(d.value > 0 || d.value < 0){
                     return d.r + 20;
@@ -57,14 +59,14 @@ d3.csv("data.csv", function(d) {
                 }
             })
             .style("stroke-width","1px")
-            .style("stroke","#000")
+            .style("stroke","#555")
 
             .on("mousemove", function(d){
                 tooltip
                     .style("left", d3.event.pageX - 20 + "px")
                     .style("top", d3.event.pageY - 120 + "px")
                     .style("display", "inline-block")
-                    .html(d.recurring_type + "<br>" + "<strong><span class='rev'>" + d.business_line + "<br>$" + d.value) + "</span></strong>";
+                    .html("<strong><span class='type'>" + d.recurring_type + "</span>" + "<br>" + "<strong><span class='rev'>" + d.business_line + "<br>$" + formatComma(d.value)) + "</span></strong>";
                 })
             .on("mouseout", function(d){ 
                 tooltip
@@ -72,7 +74,7 @@ d3.csv("data.csv", function(d) {
                 })
             .on('click', function(d) {     
                 additionalInfo.innerHTML = 
-                    d.business_line + "<br>" + d.recurring_type + "<br>" + d.value;
+                    d.business_line + "<br>" + d.recurring_type + "<br>" + "$" + formatComma(d.value);
                 });
 
         node.append("text")
