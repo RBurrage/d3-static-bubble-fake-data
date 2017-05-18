@@ -22,10 +22,11 @@ d3.csv("data.csv", function(d) {
     }, function(error, classes) {
         var root = d3.hierarchy({children: classes})
             .sum(function(d) { return d.value; })
-            .each(function(d) {
+            .each(function(d) {console.log(d);
                 if (id = d.data.business_line) {
-                  var id, i = id.lastIndexOf(".");
-                  d.business_line = id;
+                  d.recurring_type = d.data.recurring_type;
+                  var i = id.lastIndexOf(".");
+                  d.business_line = d.data.business_line;
                   d.package = id.slice(0, i);
                   d.class = id.slice(i + 1);
                 }
