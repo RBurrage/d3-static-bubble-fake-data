@@ -1,41 +1,36 @@
 html, body {
     margin:5px 0;
     font-family: 'Lato', sans-serif;
-    background: #323232;
+    background: #333;
+}
+.svg-wrapper {
+    margin: 40px auto;
+    width: 700px;
+    height: 800px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 40px 20px;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px #000;
 }
 text {
   font: 14px 'Lato', sans-serif;
   fill: #fff;
 }
-
 h1 {
-    font-size: 20px;
+    font-size: 24px;
+    Color: #a8bfdf;
 }
 h2 {
-    color: #fff;
+    font-size: 22px;
     font-weight: normal;
-    margin:20px;
-}
-h3 {
-    font-style:normal
+    margin-top:-10px
 }
 svg {
     float:left;
     background-position: center;     
-    border-right: 1px solid #ccc;
-}
-#additional-info {
-    width: 300px;
-    padding: 0 20px;
-    color: #fff;
-    float:left;
-    min-height: 700px;
-}
-.showMeTheMoney {
-    font-size: 30px
-}
-.bold {
-    font-weight: bold;
 }
 text.rev-label{
  fill: #fff;
@@ -49,9 +44,8 @@ text.rev-label{
   background: none repeat scroll 0 0 #ffffff;
   border: 1px solid #6F257F;
   padding: 14px;
-  text-align: center;
   pointer-events: none;
-  width:150px;
+  width:auto;
   opacity: 0.85;
 }
 .rev {
@@ -59,6 +53,5 @@ text.rev-label{
 }
 .type {
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
 }

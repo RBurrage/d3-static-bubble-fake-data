@@ -1,33 +1,33 @@
-recurring_type,business_line,value
-Advisory Recurring Revenue,Advisory,1905711.44
-Advisory Recurring Revenue,Consulting,0
-Non-Advisory Recurring Revenue,Brokerage,39852.17
-Non-Advisory Recurring Revenue,Disability,224.25
-Non-Advisory Recurring Revenue,Fixed Annuity,0
-Non-Advisory Recurring Revenue,Group Disability,0
-Non-Advisory Recurring Revenue,Group Products,0
-Non-Advisory Recurring Revenue,LP/REIT/UIT,12946.38
-Non-Advisory Recurring Revenue,Life,0
-Non-Advisory Recurring Revenue,Long Term Care,7501.87
-Non-Advisory Recurring Revenue,Mutual Fund,13920.60
-Non-Advisory Recurring Revenue,Other,131.69
-Non-Advisory Recurring Revenue,Term,0
-Non-Advisory Recurring Revenue,Universal Life,1304.46
-Non-Advisory Recurring Revenue,Variable Annuity Life,64332.86
-Non-Advisory Recurring Revenue,Variable Universal Life,1015.60
-Non-Advisory Recurring Revenue,Whole Life,0
-Non-Recurring Revenue,Brokerage,-12404.12
-Non-Recurring Revenue,Disability,610.49
-Non-Recurring Revenue,Fixed Annuity,0
-Non-Recurring Revenue,Group Disability,0
-Non-Recurring Revenue,Group Products,0
-Non-Recurring Revenue,LP/REIT/UIT,0
-Non-Recurring Revenue,Life,0
-Non-Recurring Revenue,Long Term Care,0
-Non-Recurring Revenue,Mutual Fund,5136.35
-Non-Recurring Revenue,Other,0
-Non-Recurring Revenue,Term,10693.63
-Non-Recurring Revenue,Universal Life,11886.51
-Non-Recurring Revenue,Variable Annuity,211177.18
-Non-Recurring Revenue,Variable Universal Life,2129.57
-Non-Recurring Revenue,Whole Life,0
+recurring_type,business_line,firm_revenue,advisor_revenue,ticket_admin_fee,value
+Data1,Lorem,2701931.756,2036360.9,82006.7,1954354.86
+Data1,Aenean,16574.2625,882.72,0,882.72
+Data2,Suspendisse,54801.0145,37488.08,0,37488.08
+Data2,Aliquam Fermentum,224.25,224.25,0,224.25
+Data2,Sed Dignissim,0,0,0,0
+Data2,Nullam Vel,0,0,0,0
+Data2,Integer Laoreet,0,0,0,0
+Data2,Etiam,13995.6,12736,0,12736
+Data2,Volutpat,0,0,0,0
+Data2,Sapien,7537.66,7537.66,0,7537.66
+Data2,Habitasse,33505.4585,13889.26,0,13889.26
+Data2,Dapibus,0.56,0.5,0,0.5
+Data2,Malesuada,0,0,0,0
+Data2,Vestibulum,1238.68,1238.68,0,1238.68
+Data2,Pellentesque,141746.138,57338.12,0,57338.12
+Data2,Praesent Bibendum,1434.008,1015.6,0,1015.6
+Data2,Hendrerit Dictum,0,0,0,0
+Data3,Elementum Dignissim,33374.801,30440.88,40199.6,-9758.74
+Data3,Tortor,610.49,610.49,0,610.49
+Data3,Nnon Tristique,0,0,0,0
+Data3,Augue,0,0,0,0
+Data3,Curabitur,0,0,0,0
+Data3,Dictumst,0,0,0,0
+Data3,Suscipit,0,0,0,0
+Data3,Venenatis,0,0,0,0
+Data3,Nulla Facilis,9895.1115,8010.73,0,8010.73
+Data3,Other,0,0,0,0
+Data3,Quisque Viverra,10494.81,10494.81,0,10494.81
+Data3,Condimentum,12904.41,12904.41,0,12904.41
+Data3,Laoreet,237666.069,211465.19,0,211465.19
+Data3,Arcu sed,2786.18,2535.43,0,2535.43
+Data3,Donec,0,0,0,0
